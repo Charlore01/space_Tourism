@@ -1,0 +1,182 @@
+/* Start destination */
+.destination {
+  /* Background image for the destination section */
+  background-image: url(../assets/destination/background-destination-desktop.jpg);
+  background-position: center; /* Center the background image */
+  background-size: cover; /* Cover the entire background area */
+  display: flex; /* Use flexbox layout */
+  padding-top: calc(136px + 76px); /* Add padding to the top */
+  width: 100%;
+}
+
+.destination .main-box {
+  display: flex; /* Use flexbox layout for main content */
+  justify-content: space-around; /* Distribute items evenly */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+}
+
+.destination .main-box img {
+  max-width: 445px; /* Set maximum width for images */
+  margin-bottom: 53px; /* Add margin below the image */
+}
+
+.destination .main-box .content {
+  width: 445px; /* Set width for content */
+}
+
+.destination ul {
+  display: flex; /* Use flexbox layout for list items */
+  gap: 35px; /* Space between list items */
+  margin-bottom: 37px; /* Add margin below the list */
+}
+
+.destination ul li {
+  height: 39px; /* Set height for list items */
+  position: relative; /* Position relative for pseudo-elements */
+}
+
+.destination ul li::before {
+  content: ""; /* Pseudo-element for underline effect */
+  width: 0%; /* Initial width of the underline */
+  height: 2px; /* Height of the underline */
+  background: var(--hover-color); /* Underline color */
+  position: absolute; /* Absolute positioning within list item */
+  bottom: 0; /* Align underline to the bottom */
+  left: 0; /* Align underline to the left */
+  transition: 0.3s linear; /* Smooth transition for hover effect */
+}
+
+.destination ul li:hover::before {
+  width: 100%; /* Expand underline on hover */
+}
+
+.destination ul li.active::before {
+  width: 100%; /* Full underline for active item */
+  background-color: #fff; /* White color for the underline */
+}
+
+.destination ul li a {
+  color: var(--secend-color); /* Link color */
+  font-size: 16px; /* Font size for links */
+  letter-spacing: 2.7px; /* Letter spacing for links */
+  font-family: var(--main-font); /* Font family for links */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.destination ul li.active a {
+  color: #fff; /* White color for active link */
+}
+
+.destination .text h2 {
+  font-size: 100px; /* Font size for heading */
+  font-family: var(--secend-font); /* Font family for heading */
+  color: #fff; /* White color for heading */
+  font-weight: 400; /* Font weight for heading */
+  text-transform: uppercase; /* Uppercase text */
+  margin-bottom: 14px; /* Margin below the heading */
+  transition: 0.3s linear; /* Smooth transition for effects */
+}
+
+.destination .text > p {
+  color: var(--secend-color); /* Color for paragraph text */
+  font-weight: 400; /* Font weight for paragraph text */
+  font-family: var(--main-font); /* Font family for paragraph text */
+  margin-bottom: 54px; /* Margin below the paragraph */
+  line-height: 32px; /* Line height for paragraph text */
+}
+
+.destination .text .break {
+  width: 100%; /* Full width line */
+  height: 1px; /* Height of the line */
+  background-color: var(--secend-color); /* Line color */
+}
+
+.destination .info {
+  display: flex; /* Use flexbox layout for info section */
+  gap: 79px; /* Space between info boxes */
+  margin-top: 28px; /* Margin above the info section */
+  margin-bottom: 62px; /* Margin below the info section */
+}
+
+.destination .info .box h3 {
+  color: var(--secend-color); /* Color for sub-heading */
+  font-family: var(--main-font); /* Font family for sub-heading */
+  font-size: 14px; /* Font size for sub-heading */
+  letter-spacing: 2.36px; /* Letter spacing for sub-heading */
+  margin-bottom: 12px; /* Margin below the sub-heading */
+  text-transform: uppercase; /* Uppercase text */
+}
+
+.destination .info .box p {
+  color: #fff; /* Color for paragraph text */
+  font-size: 28px; /* Font size for paragraph text */
+  font-family: var(--secend-font); /* Font family for paragraph text */
+  text-transform: uppercase; /* Uppercase text */
+}
+
+/* Responsive design for tablets */
+@media (max-width: 767px) {
+  .destination {
+    /* Background image for tablets */
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+  }
+
+  .destination .main-box {
+    justify-content: center; /* Center content horizontally on tablets */
+  }
+
+  .destination ul {
+    justify-content: center; /* Center list items on tablets */
+  }
+
+  .destination .text h2,
+  .destination .text > p {
+    text-align: center; /* Center text on tablets */
+  }
+
+  .destination .info {
+    justify-content: center; /* Center info boxes on tablets */
+  }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 576px) {
+  .destination {
+    /* Background image for mobile devices */
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
+  }
+
+  .destination .main-box img {
+    width: 170px; /* Set image width for mobile devices */
+  }
+
+  .destination .main-box .content {
+    width: 327px; /* Set content width for mobile devices */
+  }
+
+  .destination ul {
+    gap: 26px; /* Adjust gap between list items for mobile devices */
+  }
+
+  .destination ul li a {
+    font-size: 14px; /* Adjust font size for links on mobile devices */
+  }
+
+  .destination .text h2 {
+    font-size: 56px; /* Adjust font size for heading on mobile devices */
+  }
+
+  .destination .info {
+    flex-direction: column; /* Stack info boxes vertically on mobile devices */
+    align-items: center; /* Center info boxes horizontally */
+    gap: 32px; /* Adjust gap between info boxes for mobile devices */
+  }
+}
+
+@media (max-width: 350px){
+  .container {
+    width: 100%;
+  }
+}
+/* End destination */

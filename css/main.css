@@ -1,0 +1,274 @@
+/* Start Main Rules */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+
+/* Define CSS variables for colors and fonts */
+:root {
+  --main-color: #0b0d17; /* Main background color */
+  --secend-color: #d2d8f9; /* Secondary color for accents */
+  --hover-color: #85868b; /* Color on hover for links */
+  --main-padding-top: 100px; /* Top padding for main sections */
+  --main-padding-bottom: 100px; /* Bottom padding for main sections */
+  --main-font: "Barlow Condensed", sans-serif; /* Main font family */
+  --secend-font: "Bellefair", serifs; /* Secondary font family */
+}
+
+/* Apply box-sizing to all elements and reset padding and margin */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for section elements */
+section {
+  width: 100vw; /* Full viewport width */
+  min-height: 100vh; /* Full viewport height */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Style for the body element */
+body {
+  overflow-x: hidden; /* Hide horizontal overflow */
+  font-weight: 400; /* Normal font weight */
+}
+
+/* Style for the main title */
+.main-title {
+  color: #fff; /* White text color */
+  font-size: 28px; /* Font size */
+  font-family: var(--main-font); /* Use main font family */
+  font-weight: 400; /* Normal font weight */
+  letter-spacing: 4.72px; /* Spacing between letters */
+  margin-bottom: 64px; /* Bottom margin */
+}
+
+/* Style for bold text within the main title */
+.main-title b {
+  margin-right: 28px; /* Right margin for bold text */
+  color: #979797; /* Gray color for bold text */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 576px) {
+  .main-title {
+    font-size: 16px; /* Smaller font size for small screens */
+    text-align: center; /* Center align text */
+  }
+}
+
+/* Style for container elements */
+.container {
+  margin: 0 auto; /* Center container horizontally */
+  padding: 0 15px; /* Horizontal padding */
+}
+
+/* Responsive styles for small devices */
+@media (min-width: 576px) {
+  .container {
+    width: 560px; /* Set width for small devices */
+  }
+}
+
+/* Responsive styles for medium devices */
+@media (min-width: 768px) {
+  .container {
+    width: 750px; /* Set width for medium devices */
+  }
+}
+
+/* Responsive styles for extra large devices */
+@media (min-width: 1200px) {
+  .container {
+    width: 1190px; /* Set width for extra large devices */
+  }
+}
+
+/* Style for unordered lists */
+ul {
+  list-style: none; /* Remove default list styling */
+}
+
+/* Style for links */
+a {
+  text-decoration: none; /* Remove underline from links */
+}
+/* End Main Rules */
+
+/* Start Header */
+/* Style for the header element */
+header {
+  height: 96px; /* Set height of the header */
+  margin: 40px 0 0; /* Margin on top and zero margin on sides and bottom */
+  position: relative; /* Relative positioning */
+  z-index: 9999; /* High z-index to ensure it is above other elements */
+}
+
+/* Style for container within the header */
+header .container {
+  height: 100%; /* Full height of the header */
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Space out children elements */
+  align-items: center; /* Center items vertically */
+  position: relative; /* Relative positioning */
+  z-index: 9; /* Z-index for stacking context */
+}
+
+/* Style for the logo in the header */
+header .logo {
+  width: 48px; /* Set width of the logo */
+  height: 48px; /* Set height of the logo */
+}
+
+/* Style for the line in the header */
+header .line {
+  width: 473px; /* Set width of the line */
+  height: 1px; /* Set height of the line */
+  background-color: #fff; /* White background color */
+}
+
+/* Hide menu open and close buttons by default */
+header .open-menu,
+header .close-menu {
+  display: none; /* Hide elements */
+}
+
+/* Style for navigation links in the header */
+header nav ul {
+  display: flex; /* Use flexbox layout */
+  gap: 48px; /* Space between navigation items */
+  height: 96px; /* Set height of the navigation */
+}
+
+/* Style for each list item in the navigation */
+header nav ul li {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center items vertically */
+  position: relative; /* Relative positioning for pseudo-elements */
+  height: 100%; /* Full height of the navigation */
+}
+
+/* Style for the underline effect on navigation items */
+header ul li::before {
+  content: ""; /* Empty content */
+  width: 0%; /* Initial width */
+  height: 3px; /* Height of the underline */
+  position: absolute; /* Absolute positioning */
+  bottom: 0; /* Position at the bottom of the list item */
+  right: 0; /* Align to the right of the list item */
+  transition: all 0.3s linear; /* Smooth transition effect */
+}
+
+/* Style for underline effect on hover */
+header ul li:hover::before {
+  background-color: var(--hover-color); /* Hover color */
+  width: 100%; /* Full width on hover */
+}
+
+/* Style for active navigation item */
+header ul li.active::before {
+  width: 100%; /* Full width for active item */
+  background-color: #fff; /* White color for active underline */
+}
+
+/* Style for links within navigation items */
+header ul li a {
+  font-family: var(--main-font); /* Use main font family */
+  font-size: 16px; /* Font size */
+  color: #fff; /* White text color */
+}
+
+/* Style for bold text within navigation links */
+header ul li a b {
+  margin-right: 11px; /* Right margin for bold text */
+}
+
+/* Style for the blurred background in the header */
+header .blure_back {
+  width: 830px; /* Set width of the blurred background */
+  height: 96px; /* Set height of the blurred background */
+  background: rgba(255, 255, 255, 0.04); /* Semi-transparent background */
+  backdrop-filter: blur(81.5485px); /* Apply blur effect */
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Align to the top of the header */
+  right: 0; /* Align to the right of the header */
+}
+
+/* Responsive styles for screens smaller than 1100px */
+@media (max-width: 1100px) {
+  header .line {
+    display: none; /* Hide the line */
+  }
+}
+
+/* Responsive styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  header {
+    margin: 0; /* Remove top margin */
+  }
+  header ul li a b {
+    display: none; /* Hide bold text in navigation links */
+  }
+  header .blure_back {
+    width: 450px; /* Reduce width of blurred background */
+  }
+}
+
+/* Responsive styles for screens smaller than 576px */
+@media (max-width: 576px) {
+  header nav {
+    height: 100vh; /* Full viewport height for navigation */
+    width: 80%; /* Set width of navigation */
+    position: absolute; /* Absolute positioning */
+    top: 0; /* Align to the top of the viewport */
+    right: 0; /* Align to the right of the viewport */
+    background: rgba(255, 255, 255, 0.04); /* Semi-transparent background */
+    backdrop-filter: blur(81.5485px); /* Apply blur effect */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    opacity: 0; /* Initially hidden */
+    transition: 0.3s linear; /* Smooth transition effect */
+    pointer-events: none; /* Disable pointer events */
+  }
+  header nav .close-menu {
+    display: block; /* Show close menu button */
+    width: 19.9px; /* Set width */
+    margin-top: 34px; /* Margin on top */
+    margin-bottom: 65px; /* Margin on bottom */
+    margin-right: 26.5px; /* Margin on right */
+    align-self: flex-end; /* Align to the end of the flex container */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  header .open-menu {
+    display: block; /* Show open menu button */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  header nav.active {
+    opacity: 1; /* Show navigation when active */
+    pointer-events: all; /* Enable pointer events */
+  }
+  header nav ul {
+    flex-direction: column; /* Stack navigation items vertically */
+    height: 100%; /* Full height of the navigation */
+  }
+  header nav ul li {
+    height: 19px; /* Set height of each navigation item */
+  }
+  header ul li::before {
+    height: 100%; /* Full height of the underline */
+    width: 3px; /* Width of the underline */
+  }
+  header ul li.active::before {
+    height: 100%; /* Full height for active underline */
+    width: 5px; /* Increase width for active underline */
+  }
+  header ul li a b {
+    display: inline; /* Display bold text inline */
+    margin-left: 32px; /* Margin on left of bold text */
+  }
+  header .blure_back {
+    display: none; /* Hide blurred background */
+  }
+}
+/* End Header */

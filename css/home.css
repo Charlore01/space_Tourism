@@ -1,0 +1,178 @@
+/* Start Landing */
+.landing {
+  /* Set background image for the landing section */
+  background-image: url(../assets/home/background-home-desktop.jpg);
+  background-position: center; /* Center the background image */
+  background-size: cover; /* Cover the entire element with the background image */
+  display: flex; /* Use flexbox layout */
+  padding-top: calc(136px + 76px); /* Padding on top to adjust for header and other elements */
+  max-width: 100%;
+}
+
+.landing .container {
+  /* Flex container to hold content and align items */
+  display: flex;
+  justify-content: space-between; /* Distribute space between child elements */
+  align-items: flex-end; /* Align items at the bottom */
+  padding-bottom: var(--main-padding-bottom); /* Padding at the bottom */
+}
+
+.landing .container .content {
+  /* Define width for the content */
+  width: 382px;
+}
+
+.landing .container h1 {
+  /* Style for the main heading */
+  font-size: 28px; /* Font size */
+  font-family: var(--main-font); /* Font family from variables */
+  color: var(--secend-color); /* Font color from variables */
+  font-weight: 400; /* Font weight */
+  letter-spacing: 4.72px; /* Space between letters */
+}
+
+.landing .container h1 span {
+  /* Style for the span inside the heading */
+  font-family: var(--secend-font); /* Different font family for span */
+  font-size: 150px; /* Large font size for emphasis */
+  color: #fff; /* White color for the text */
+  text-transform: uppercase; /* Uppercase text transformation */
+  display: inline-block; /* Inline-block display to control size and spacing */
+  margin: 24px 0; /* Margin above and below the span */
+  letter-spacing: 0; /* No additional spacing between letters */
+}
+
+.landing .container p {
+  /* Style for the paragraph text */
+  font-size: 18px; /* Font size */
+  color: var(--secend-color); /* Font color from variables */
+  font-family: var(--main-font); /* Font family from variables */
+  font-weight: 400; /* Font weight */
+  letter-spacing: 0; /* No additional spacing between letters */
+  line-height: 32px; /* Line height for readability */
+}
+
+.landing .container a {
+  /* Style for the link button */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  width: 274px; /* Fixed width */
+  height: 274px; /* Fixed height */
+  background-color: #fff; /* White background */
+  border-radius: 50%; /* Circular shape */
+  font-family: var(--secend-font); /* Font family for the button text */
+  font-size: 32px; /* Font size */
+  position: relative; /* Position relative to allow absolute positioning of pseudo-element */
+  color: var(--main-color); /* Text color from variables */
+  z-index: 5; /* Stack order */
+  margin-bottom: 65px; /* Margin below the button */
+}
+
+.landing .container a::before {
+  /* Pseudo-element for hover effect */
+  content: ""; /* No content, used for styling */
+  position: absolute; /* Absolute positioning relative to the button */
+  top: 50%; /* Position vertically centered */
+  left: 50%; /* Position horizontally centered */
+  transform: translate(-50%, -50%); /* Centering adjustment */
+  height: 0px; /* Initial height */
+  width: 0px; /* Initial width */
+  z-index: 3; /* Stack order below the button text */
+  border-radius: 50%; /* Circular shape */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  transition: 0.3s linear; /* Smooth transition for hover effect */
+}
+
+.landing .container a:hover::before {
+  /* Expanded pseudo-element on hover */
+  height: 450px; /* Expanded height */
+  width: 450px; /* Expanded width */
+}
+
+/* responsiveness for the page  */
+@media (max-width: 1200px){
+  .content {
+    margin-left: -40px;
+  }
+
+  .landing .container a {
+    width: 220px;
+    height: 220px;
+  }
+
+
+}
+
+/* Tablet Device */
+@media (max-width: 768px) {
+  .landing {
+    /* Change background image for tablet devices */
+    background-image: url(../assets/home/background-home-tablet.jpg);
+  }
+  
+  .landing .container {
+    /* Adjust layout for tablet devices */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .landing .container h1 {
+    /* Center-align heading text for tablet devices */
+    text-align: center;
+  }
+
+  .landing .container p {
+    /* Add margin at the bottom for tablet devices */
+    margin-bottom: 156px;
+  }
+}
+
+/* Phone Device */
+@media (max-width: 576px) {
+  .landing {
+    /* Change background image for phone devices */
+    background-image: url(../assets/home/background-home-mobile.jpg);
+  }
+  
+  .landing .container .content {
+    /* Adjust width of content for phone devices */
+    width: 320px;
+    margin-left: 20px;
+  }
+
+  .landing .container h1 span {
+    /* Adjust font size of span for phone devices */
+    font-size: 80px;
+  }
+
+  .landing .container p {
+    /* Adjust font size of paragraph text for phone devices */
+    font-size: 15px;
+    text-align-last: center;
+  }
+}
+
+@media (max-width: 325px){
+  .landing {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .landing .container .content h1 {
+    width: 250px;
+  }
+
+  .landing .container .content p {
+    width: 250px;
+  }
+
+  .container a {
+    margin-left: -50px;
+  }
+}
+
+
+
+
+/* End Landing */

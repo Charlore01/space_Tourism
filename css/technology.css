@@ -1,0 +1,210 @@
+/* Start Technology */
+
+/* Container for the technology section */
+.technology {
+  /* Set background image for the section */
+  background-image: url(../assets/technology/background-technology-desktop.jpg);
+  /* Center the background image */
+  background-position: center;
+  /* Cover the entire container with the background image */
+  background-size: cover;
+  /* Use flexbox for layout */
+  display: flex;
+  /* Add padding to the top */
+  padding-top: calc(136px + 76px);
+  width: 100%;
+}
+
+/* Content container inside the technology section */
+.technology .content {
+  /* Use flexbox for layout inside the content container */
+  display: flex;
+  /* Align items center along the cross axis */
+  align-items: center;
+  /* Space items apart */
+  gap: 80px;
+}
+
+/* Container for enumerating technology features */
+.technology .enumirate {
+  /* Arrange child items in a column */
+  display: flex;
+  flex-direction: column;
+  /* Space out the items */
+  gap: 32px;
+}
+
+/* Style for individual enumeration numbers */
+.technology .enumirate .num {
+  /* Set fixed width and height */
+  width: 80px;
+  height: 80px;
+  /* Make the number circle */
+  border-radius: 50%;
+  /* Add border to the circle */
+  border: 1px solid var(--hover-color);
+  /* Use flexbox for centering the number inside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Set text color and size */
+  color: #fff;
+  font-size: 32px;
+  font-family: var(--secend-font);
+  /* Change cursor to pointer */
+  cursor: pointer;
+}
+
+/* Hover effect for enumeration numbers */
+.technology .enumirate .num:hover {
+  /* Change border color on hover */
+  border-color: #fff;
+}
+
+/* Style for active enumeration numbers */
+.technology .enumirate .num.active {
+  /* Change text color for active state */
+  color: var(--main-color);
+  /* Set background color for active state */
+  background-color: #fff;
+}
+
+/* Style for the subheading in the content */
+.technology .content h2 {
+  /* Set font size and letter spacing */
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  /* Set text color */
+  color: var(--secend-color);
+  /* Add margin below */
+  margin-bottom: 11px;
+  /* Use the secondary font */
+  font-family: var(--main-font);
+  /* Transform text to uppercase */
+  text-transform: uppercase;
+}
+
+/* Style for the main name in the content */
+.technology .content .name {
+  /* Set font size and color */
+  font-size: 56px;
+  font-family: var(--secend-font);
+  text-transform: uppercase;
+  color: #fff;
+  /* Add margin below */
+  margin-bottom: 17px;
+}
+
+/* Style for the description text in the content */
+.technology .content .description {
+  /* Set fixed width */
+  width: 444px;
+  /* Set font size and line height */
+  font-size: 18px;
+  color: var(--secend-color);
+  line-height: 32px;
+  /* Add word spacing */
+  word-spacing: 1px;
+  /* Add margin below */
+  margin-bottom: 97px;
+}
+
+/* Style for the image inside the content */
+.technology .content img {
+  /* Position image to the right */
+  position: absolute;
+  top: 200px;
+  right: 0;
+  height: 475px;
+}
+
+/* Responsive adjustments for screens up to 1100px wide */
+@media (max-width: 1100px) {
+  /* Adjust margin for the main title */
+  .technology .main-title {
+    margin-left: 15px;
+  }
+  /* Adjust container width and padding */
+  .technology .container {
+    width: 100%;
+    padding: 0;
+  }
+  /* Adjust flex direction and alignment for content */
+  .technology .content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  /* Adjust image positioning and size */
+  .technology .content img {
+    position: relative;
+    /* top: 800px; */
+    width: 100vw;
+    order: 4;
+    margin-top: 350px;
+  }
+  /* Adjust order and direction of enumirate container */
+  .technology .enumirate {
+    order: 3;
+    flex-direction: row;
+    margin-top: -850px;
+  }
+  /* Center align text in the content */
+  .technology .content h2,
+  .technology .content .name,
+  .technology .content .description {
+    text-align: center;
+  }
+}
+
+/* Responsive adjustments for screens up to 768px wide */
+@media (max-width: 768px) {
+  /* Change background image for tablet view */
+  .technology {
+    background-image: url(../assets/technology/background-technology-tablet.jpg);
+  }
+}
+
+/* Responsive adjustments for screens up to 576px wide */
+@media (max-width: 576px) {
+  /* Change background image for mobile view */
+  .technology {
+    background-image: url(../assets/technology/background-technology-mobile.jpg);
+  }
+  /* Adjust gap between enumeration numbers */
+  .technology .enumirate {
+    gap: 16px;
+  }
+  /* Adjust size and font of enumeration numbers */
+  .technology .enumirate .num {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 225px;
+  }
+  /* Adjust font size of subheading */
+  .technology .content h2 {
+    font-size: 14px;
+  }
+  /* Adjust font size of name */
+  .technology .content .name {
+    font-size: 24px;
+  }
+  /* Adjust font size and width of description */
+  .technology .content .description {
+    font-size: 15px;
+    width: 327px;
+  }
+
+  .technology .content img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 350px){
+  .technology  {
+     width: 100%;
+     overflow-x: hidden;
+  }
+}
+
+/* End Technology */
